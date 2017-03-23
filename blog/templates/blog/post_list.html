@@ -1,23 +1,184 @@
 {% load staticfiles %}
-<html>
-    <head>
-        <title>Django Girls blog</title>
-        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
+<!DOCTYPE html>
+<html lang="br" style="height: 100%" dir="ltr">
+<head>
+  <title>Projeto Play</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaksbr }}</p>
+  <!--js-->
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="{% static 'js/classie.js' %}"></script>
+  <script src="{% static 'js/header.js' %}"></script>
+  <script src="{% static 'js/smooth-scroll.js' %}"></script>
+
+  <!--fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <!--bootstrap-->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+  <!--css-->
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+</head>
+<body>
+  <div class="navigator">
+    <div class="container">
+      <img src="{% static 'img/Logo-Large-W.png' %}">
+      <div class="rightc">
+        <a href="index.html">Sobre nós</a>
+        <a href="index.html">Eventos</a>
+        <a href="index.html">Galeria</a>
+        <a href="index.html">Contato</a>
+        <button type="button" class="btn btn-danger">Contribua <i class="fa fa-heart" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="cell A1">
+      <div class="container">
+        <div id="text">
+          <img class="animated slideInDown" src="{% static 'img/Logo-Large-W.png' %}">
+          <h3>Levando o aprendizado da língua inglesa para a rede pública de ensino</h3>
+          <button type="button" class="btn btn-danger">Saiba Mais!</i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="border"></div>
+
+  <section id="blue">
+    <div class="container">
+      <h1>Seja Bem-Vindo!</h1>
+      <p>O <span>Projeto Play</span> é um projeto social mantido por alunos da <span>Universidade Federal de Itajubá</span>, e que possui o objetivo de levar o ensino da <span>língua inglesa</span> até estudantes da rede pública de ensino.</p>
+      <p>O projeto nasceu em 2013, e atualmente trabalha com a <span>Escola Municipal São Sebastião</span>, em Itajubá <span>Minas Gerais</span>.</p>
+      <p><span>12 voluntários</span>, todos estudantes de administração da <span>Unifei</span>, ministram as aulas semanalmente para alunos dos quartos e quintos anos do ensino fundamental.</p>
+      <p>Nosso objetivo é promover a <span>inclusão social</span> através da educação. Acreditamos que  <span> educação</span> de qualidade é a base para uma sociedade melhor e mais justa.</p>
+      <p>Esperamos que o conhecimento de língua estrangeira que estamos passando aos nossos alunos seja um catalisador de mudanças de vida, <span>abrindo portas</span> e <span>oportunidades</span> que antes pareciam impossíveis.</p>
+      <p>Mais de <span>100 alunos</span> são atendidos diretamente pelo programa atualmente.</p>
+      <button type="button" class="btn btn-default" style="
+          margin-top: 4%;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-bottom: 8px;
+          padding-top: 8px;">Saiba mais sobre nossa história</button>
+    </div>
+  </section>
+
+  <div class="background"></div>
+  <div class="foreground"></div>
+
+  <section id="segundo">
+    <div class="container">
+      <div class="col-md-8">
+        <h3><i class="fa fa-bars" aria-hidden="true"></i>   Notícias</h3>
+        <ul>
+          <li>
+            <div class="inside">
+              <div class="cont" style="
+                  background-image: url("{% static 'img/icon.jpg' %}");
+                  background-size: cover;
+                  border-radius: 2px;
+                ">
+                </div>
+              <div class="cont2">
+                <p>"Quem lê para uma criança muda o mundo". Os voluntários do projeto...</p>
+                <p><span><i class="fa fa-clock-o" aria-hidden="true"></i> 11 de Novembro de 2015</span></p>
+              </div>
+          </li>
+          <li>
+            <div class="inside">
+              <div class="cont" style="
+                  background-image: url("{% static 'img/icon2.jpg' %}");
+                  background-size: cover;
+                  border-radius: 2px;
+                ">
+              </div>
+              <div class="cont2">
+                <p>Ontem o dia foi de preparação de atividades para as próximas aulas.</p>
+                <p><span><i class="fa fa-clock-o" aria-hidden="true"></i> 10 de Maio de 2016</span></p>
+              </div>
             </div>
-        {% endfor %}
-    </body>
+          </li>
+          <li>
+            <div class="inside">
+              <div class="cont" style="
+                  background-image: url("{% static 'img/icon3.jpg' %}");
+                  background-size: cover;
+                  border-radius: 2px;
+                ">
+              </div>
+              <div class="cont2">
+                <p>Hoje a aula da manhã foi cheia de muitas dúvidas. Mas</p>
+                <p><span><i class="fa fa-clock-o" aria-hidden="true"></i> 2 de Junho de 2016</span></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <p>Veja mais notícias...</p>
+      </div>
+      <div class="col-md-4">
+        <h3><i class="fa fa-calendar-o" aria-hidden="true"></i>   Eventos</h3>
+        <ul>
+          <li>
+            <div class="inside2">
+              <p>Inauguração Bilblioteca Ásas a imaginação</p>
+              <span><i class="fa fa-calendar-o" aria-hidden="true"></i> 5 de Agosto de 2016</span>
+              <div class="time"><i class="fa fa-clock-o" aria-hidden="true"></i>10:00 AM</div>
+            </div>
+          </li>
+          <li>
+            <div class="inside2">
+              <p>Início das aulas segundo semestre 2016</p>
+              <span><i class="fa fa-calendar-o" aria-hidden="true"></i> 1 de Agosto de 2016</span>
+              <div class="time"><i class="fa fa-clock-o" aria-hidden="true"></i>09:00 AM</div>
+            </div>
+          </li>
+          <li>
+            <div class="inside2">
+              <p>Apresentação dos alunos do projeto</p>
+              <span><i class="fa fa-calendar-o" aria-hidden="true"></i> 29 de junho de 2016</span>
+              <div class="time"><i class="fa fa-clock-o" aria-hidden="true"></i>05:00 PM</div>
+            </div>
+          </li>
+        </ul>
+        <p>Veja mais eventos...</p>
+      </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="terceiro">
+    <div class="container">
+      <h1>Abraçe essa causa.</h1>
+      <p><span>Seja um voluntário.</span></p>
+    </div>
+  </section>
+
+  <div class="border"></div>
+
+  <footer>
+    <div class="container">
+      <div class="col-md-4">
+        <h3>Contato</h3>
+      </div>
+      <div class="col-md-4">
+        <h3>Links</h3>
+      </div>
+      <div class="col-md-4">
+        <h3>Notificações</h3>
+      </div>
+    </div>
+  </footer>
+  <div class="rodape">© 2015-2016 <span>Projeto Play</span>. Todos os direitos reservados.</div>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
 </html>
+
+<!--84DCCF-->
